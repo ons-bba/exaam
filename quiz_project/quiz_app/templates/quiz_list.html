@@ -1,0 +1,11 @@
+<ul>
+{% for quiz in object_list %}
+    <li>
+        {{ quiz.titre }} 
+        <a href="{% url 'quiz_update' quiz.pk %}">Modifier</a>
+        <a href="{% url 'quiz_delete' quiz.pk %}">Supprimer</a>
+        <a href="{% url 'question_list' quiz.pk %}">Questions</a>
+    </li>
+{% endfor %}
+</ul>
+<a href="{% url 'admin:index' %}">Admin</a>

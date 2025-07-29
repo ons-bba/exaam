@@ -1,0 +1,7 @@
+<h1>Questions</h1>
+<ul>
+{% for question in questions %}
+    <li>{{ question.text }}</li>
+{% endfor %}
+</ul>
+<a href="{% url 'add_question' quiz_id %}">Ajouter Question</a>
